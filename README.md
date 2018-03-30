@@ -15,7 +15,7 @@ OpenCV in this case is to act as a security measure against any train derailment
 
 I began this process by distinguishing colors in still images. The results were satisfying, as displayed below.
 
-<img src="https://i.imgur.com/GnAYrJK.jpg"/> <img src="https://i.imgur.com/to0BcJF.jpg"/> <img src="https://i.imgur.com/vOP0472.jpg"/>
+<img src="https://i.imgur.com/GnAYrJK.jpg"/> <img src="https://i.imgur.com/to0BcJF.jpg"/> <img src="https://i.imgur.com/Af0XpqQ.jpg"/>
 
 <h3>II: Arduino </h3>
 

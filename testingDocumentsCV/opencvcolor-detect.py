@@ -19,6 +19,7 @@ c = max(cnts, key=cv2.contourArea)
 peri = cv2.arcLength(c, True)
 approx = cv2.approxPolyDP(c, 0.05 * peri, True)
 
+
 # draw a green bounding box surrounding the red game
 cv2.drawContours(image, [approx], -1, (0, 255, 0), 5)
 cv2.imshow("Image", image)
@@ -31,7 +32,10 @@ cv2.waitKey(0)
 
 
 
+
+
 '''
+
 # import the necessary packages
 import numpy as np
 import cv2
@@ -57,4 +61,6 @@ approx = cv2.approxPolyDP(c, 0.05 * peri, True)
 # draw a green bounding box surrounding the red game
 cv2.drawContours(image, [approx], -1, (0, 255, 0), 5)
 cv2.imshow("Image", image)
-cv2.waitKey(0)'''
+cv2.waitKey(0)
+
+'''

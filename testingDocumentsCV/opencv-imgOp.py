@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 
-img = cv2.imread('sina.jpg', cv2.IMREAD_COLOR)
+img = cv2.imread('img/sina.jpg', cv2.IMREAD_COLOR)
 
 px = img[55,55]
 img[55,55]

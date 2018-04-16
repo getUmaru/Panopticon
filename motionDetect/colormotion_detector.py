@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.ticker as plticker
+import winsound
 
 
 upper = np.array([100,100,100])
@@ -17,6 +18,8 @@ switch2 = False
 
 
 cam = cv2.VideoCapture(0)
+cam2 = cv2.VideoCapture(0)
+
 
 kernelO = np.ones((10, 10))
 #bg
@@ -32,6 +35,7 @@ while True:
     #  Everything within this loop is the processing part and everything outside is constant
     ret, img = cam.read()
     img = cv2.resize(img, (600, 500))
+    ret2, im2 = cam2.read()
     # resize the image being outputted for easier image process
 
 
@@ -91,8 +95,9 @@ while True:
     ## cv2.drawContours(img, conts, -1, (0,255,0), 3) ##
     # The line above is where line bordering is declared
 
-    cv2.rectangle(img, (200, 200), (400, 300), (0, 0, 255), -1, 100)
+    #cv2.rectangle(img, (200, 200), (400, 300), (0, 0, 255), -1, 100)
     cv2.rectangle(img,(0,0), (600,500), (0,0,255), 200, 1000)
+
 
     for i in range(len(conts)):
         x, y, w, h = cv2.boundingRect(conts[i])
@@ -100,11 +105,12 @@ while True:
 
         if 0 <= x <= 100 or 500 <= y <= 600 or 0 <= y <= 100 or 400 <= y <= 500:
             print("SOMETHING IS WRONG!!!")
+
+            while True:
+                #winsound.PlaySound('sound.wav', winsound.SND_FILENAME)
+                print("hello")
         else:
             print(x, y)
-        if 200 <= x <= 400:
-            print("SOMETHING IS WRONG!!!")
-
 
     if switch2 == True:
         plt.imshow(secondFilter, cmap="hsv", interpolation="none")
@@ -117,5 +123,6 @@ while True:
         cv2.imshow("maskClose", secondFilter)
         cv2.imshow("maskOpen", firstFilter)
         cv2.imshow("mask", mask)
-        cv2.imshow("img", img)
+        cv2.imshow("imgGrid", img)
+        #cv2.imshow("imgNorm", im2)
         cv2.waitKey(10)

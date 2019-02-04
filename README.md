@@ -2,7 +2,7 @@
 
 For anyone wanting to help please ingore everything except motionDetect/colormotion_detector
 
-This is a repository that displays my openCV work in Python. It is called Panopticon as Panopticon is Foucalt's view on power through institutions. This also reflects Jeremny Benthams's view as he coined the term. It is meant to be ironic since this is a motion tracking system.
+This is a repository that displays my openCV work in Python. It is called Panopticon as Panopticon is Foucalt's view on power through institutions. This also reflects Jeremny Benthams's view as he coined the term. It is meant to be fitting since this is a motion tracking system.
 
 
 <h2>Installation</h2>
